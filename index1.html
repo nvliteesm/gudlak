@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudlak</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <audio class="song" loop autoplay>
+        <source src="song/igotyou.mp3">
+    </source>
+    Your browser isn't invited for super fun audio time.
+</audio>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hi fake lim,</strong>
+                        <p>
+safeflight ya ke boston, ak tw pas kw buka ini mungkin kw masih di DOHA. Ak cmn mau bilang gudlak ya di MUN, buktiin klo selama 2 tahun ini kw latian utk HMUN itu ga sia sia . Itu aj si sebenarnya smoga berhasil, and btw Happy Valentine's Day 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+    Swal.fire({
+        title: 'Do you want to play music in the background?',
+        // text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.song').play();
+            animationTimeline();
+        } else {
+            animationTimeline();
+        }
+    });
+});
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
